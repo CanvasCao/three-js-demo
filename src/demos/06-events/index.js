@@ -29,7 +29,6 @@ const Index = () => {
                 <ambientLight intensity={0.2}/>
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
 
-
                 <Box position={[0, 2, 0]}
                      onPointerDown={handlePointerDown}
                      onPointerEnter={handlePointerEnter}

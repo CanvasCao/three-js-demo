@@ -1,11 +1,9 @@
-import React, {Suspense, useRef} from 'react'
-import {Canvas, extend, useFrame, useThree} from '@react-three/fiber'
+import React, {Suspense} from 'react'
+import {Canvas} from '@react-three/fiber'
 import Box from "../objects/Box";
 import Orbit from "../objects/Orbit";
 import Plane from "../objects/Plane";
 import Background from "../objects/Background";
-import Earth from "../objects/Earth";
-
 
 const Index = () => {
     return (
@@ -19,9 +17,9 @@ const Index = () => {
                 <ambientLight intensity={0.2}/>
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
 
-                {/*<Suspense fallback={null}>*/}
-                {/*    <Background src='shanghai.jpeg'/>*/}
-                {/*</Suspense>*/}
+                <Suspense fallback={null}>
+                    <Background url='shanghai.jpeg'/>
+                </Suspense>
 
                 <Suspense fallback={null}>
                     <Box position={[0, 2, 0]}

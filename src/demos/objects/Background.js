@@ -1,5 +1,5 @@
-import React, {useRef} from "react";
-import {useFrame, useLoader, useThree} from "@react-three/fiber";
+import React from "react";
+import {useLoader, useThree} from "@react-three/fiber";
 import * as THREE from 'three';
 
 const Background = (props) => {
@@ -11,7 +11,8 @@ const Background = (props) => {
 
     return (
         <primitive
-            attach='background' object={formatted.texture}
+            attach='background'
+            object={formatted.texture}
         ></primitive>
     )
 }

@@ -1,5 +1,5 @@
-import {extend, useThree} from "@react-three/fiber";
-import React from "react";
+import {extend, useFrame, useThree} from "@react-three/fiber";
+import React, {useRef} from "react";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 
 // Extend will make OrbitControls available as a JSX element called orbitControls for us to use.
@@ -14,9 +14,11 @@ const Orbit = () => {
     // Ref to the controls, so that we can update them on every frame using useFrame
     // const controls = useRef();
     // useFrame((state) => controls.current.update());
+
     return (
         <orbitControls
             // ref={controls}
+            attach='orbitControls'
             args={[camera, gl.domElement]}/>
     )
 };
