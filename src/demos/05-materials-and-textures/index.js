@@ -3,6 +3,7 @@ import {Canvas, extend, useFrame, useThree} from '@react-three/fiber'
 import Box from "../objects/Box";
 import Orbit from "../objects/Orbit";
 import Plane from "../objects/Plane";
+import Background from "../objects/Background";
 
 
 const Index = () => {
@@ -16,6 +17,11 @@ const Index = () => {
 
                 <ambientLight intensity={0.2}/>
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
+
+                <Suspense fallback={null}>
+                    <Background/>
+                </Suspense>
+
                 <Suspense fallback={null}>
                     <Box position={[0, 2, 0]}
                         // materialProps={{opacity: 0.2, transparent: true}}
@@ -24,6 +30,7 @@ const Index = () => {
                         // materialProps={{wireframe:true}}
                     />
                 </Suspense>
+
                 <Plane position={[0, -0.5, 0]}/>
 
                 <Orbit/>

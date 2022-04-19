@@ -6,6 +6,7 @@ const Box = (props) => {
     const mesh = useRef();
 
     // const texture = useLoader(THREE.TextureLoader,'metal.jpeg');
+    // const texture = useLoader(THREE.TextureLoader,'wood.jpeg');
 
     useFrame((state, delta) => {
         mesh.current.rotation.x += 0.01;
