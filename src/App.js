@@ -5,7 +5,8 @@
 // import Index from "./demos/05-materials-and-textures";
 // import Index from "./demos/05-1-earth-textures";
 // import Index from "./demos/06-events";
-import Index from "./demos/06-1-draggable";
+// import Index from "./demos/06-1-draggable";
+import Index from "./demos/07-physics";
 
 function App() {
   return <Index/>;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 import {useLoader, useThree} from "@react-three/fiber";
 import * as THREE from 'three';
 
@@ -6,8 +6,10 @@ const Background = (props) => {
     const texture = useLoader(THREE.TextureLoader, props.url);
     const {gl} = useThree();
 
-    const formatted = new THREE.WebGLCubeRenderTarget(texture.image.height)
-        .fromEquirectangularTexture(gl, texture);
+    const formatted = useMemo(() =>
+            new THREE.WebGLCubeRenderTarget(texture.image.height)
+                .fromEquirectangularTexture(gl, texture)
+        , []);
 
     return (
         <primitive
