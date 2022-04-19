@@ -25,7 +25,7 @@ const Box = (props) => {
             <boxGeometry args={[1, 1, 1]}/>
             <meshPhysicalMaterial
                 {...materialProps}
-                color={materialProps?.color || 'blue'}
+                // color={materialProps?.color || 'blue'}
                 // map={texture}
             />
         </mesh>

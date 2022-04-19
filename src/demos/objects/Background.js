@@ -3,7 +3,7 @@ import {useFrame, useLoader, useThree} from "@react-three/fiber";
 import * as THREE from 'three';
 
 const Background = (props) => {
-    const texture = useLoader(THREE.TextureLoader, 'shanghai.jpeg');
+    const texture = useLoader(THREE.TextureLoader, props.url);
     const {gl} = useThree();
 
     const formatted = new THREE.WebGLCubeRenderTarget(texture.image.height)

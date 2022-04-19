@@ -9,14 +9,13 @@ const Index = () => {
     return (
         <div style={{height: '100vh', width: '100vw'}}>
             <Canvas style={{background: 'black'}}
-                    camera={{position: [5, 5, 5], fov: 60}}
+                    camera={{position: [10, 10, 10], fov: 60}}
                     shadows
             >
                 <ambientLight intensity={0.2}/>
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
                 <Box position={[0, 2, 0]}/>
                 <Plane position={[0, -1, 0]}/>
-
 
                 <Orbit/>
                 <axesHelper args={[5]}/>
