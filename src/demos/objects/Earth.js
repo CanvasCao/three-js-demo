@@ -5,7 +5,7 @@ import * as THREE from 'three';
 const Earth = (props) => {
     const mesh = useRef();
 
-    const texture = useLoader(THREE.TextureLoader, 'earth.jpg');
+    const texture = useLoader(THREE.TextureLoader, 'earth.png');
     const {materialProps, ...meshProps} = props;
     return (
         <mesh
