@@ -21,7 +21,7 @@ const Index = () => {
                 </Suspense>
 
                 <Suspense fallback={null}>
-                    <Background url='space.png'/>
+                    <Background src='space.png'/>
                 </Suspense>
 
                 <Orbit/>

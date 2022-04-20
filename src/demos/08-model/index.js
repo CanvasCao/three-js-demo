@@ -5,7 +5,10 @@ import Orbit from "../objects/Orbit";
 import Draggable from "../objects/Draggable";
 import PhysicsBox from "../objects/physics/PhysicsBox";
 import PhysicsPlane from "../objects/physics/PhysicsPlane";
-import Model from "../objects/Model";
+import FBXModel from "../objects/FBXModel";
+import Plane from "../objects/Plane";
+import GLTFModel from "../objects/GLTFModel";
+import Box from "../objects/Box";
 
 const Index = () => {
     return (
@@ -17,12 +20,13 @@ const Index = () => {
                 <ambientLight intensity={0.2}/>
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
 
-                <Physics>
+                {/*<Physics>*/}
+                <Suspense fallback={null}>
                     <Draggable>
-                        <Model/>
+                        <GLTFModel position={[0, 1, 0]} src={'truck/scene.gltf'} scale={0.01}/>
                     </Draggable>
-                    <PhysicsPlane position={[0, 0, 0]}/>
-                </Physics>
+                </Suspense>
+                {/*</Physics>*/}
 
                 <Orbit/>
                 <axesHelper args={[5]}/>

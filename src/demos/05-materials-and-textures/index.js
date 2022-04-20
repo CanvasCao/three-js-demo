@@ -18,7 +18,7 @@ const Index = () => {
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
 
                 <Suspense fallback={null}>
-                    <Background url='shanghai.jpeg'/>
+                    <Background src='shanghai.jpeg'/>
                 </Suspense>
 
                 <Suspense fallback={null}>

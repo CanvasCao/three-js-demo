@@ -3,7 +3,7 @@ import {useLoader, useThree} from "@react-three/fiber";
 import * as THREE from 'three';
 
 const Background = (props) => {
-    const texture = useLoader(THREE.TextureLoader, props.url);
+    const texture = useLoader(THREE.TextureLoader, props.src);
     const {gl} = useThree();
 
     const formatted = useMemo(() =>

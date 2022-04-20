@@ -3,14 +3,14 @@ import {useFrame, useLoader} from "@react-three/fiber";
 import * as THREE from 'three';
 
 const Earth = (props) => {
-    const mesh = useRef();
+    const ref = useRef();
 
     const texture = useLoader(THREE.TextureLoader, 'earth.png');
     const {materialProps, ...meshProps} = props;
     return (
         <mesh
             {...meshProps}
-            ref={mesh}
+            ref={ref}
             scale={1}
             castShadow
             receiveShadow
