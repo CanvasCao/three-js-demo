@@ -11,7 +11,7 @@ const Index = () => {
     return (
         <div style={{height: '100vh', width: '100vw'}}>
             <Canvas style={{background: 'black'}}
-                    camera={{position: [10, 10, 10], fov: 60}}
+                    camera={{position: [20, 20, 20], fov: 60}}
                     shadows
             >
                 <ambientLight intensity={0.2}/>
@@ -23,7 +23,7 @@ const Index = () => {
                             <BoundingBox
                                 boxArgs={[5.5, 3, 2]}
                                 offset={[0.4, -1, 0]}
-                                position={[5, 1, 0]}
+                                position={[5, 10, 0]}
                                 visible
                             >
                                 <GLTFModel mass={10} src={'truck/scene.gltf'} scale={0.01}/>
@@ -35,7 +35,7 @@ const Index = () => {
                             <BoundingBox
                                 boxArgs={[1.2, 1.4, 1.4]}
                                 offset={[0, 0.4, 0.5]}
-                                position={[-5, 1, 0]}
+                                position={[-5, 10, 0]}
                                 visible
                             >
                                 <GLTFModel src={'shiba/scene.gltf'} scale={1}/>
