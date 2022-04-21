@@ -22,7 +22,7 @@ const Index = () => {
                         <PhysicsBox position={[1, 5, 1]} materialProps={{color: 'red'}}/>
                     </Draggable>
 
-                    <PhysicsPlane position={[0, -0.5, 0]}/>
+                    <PhysicsPlane geometryProps={{args: [10, 0.1, 10]}} position={[0, -0.5, 0]}/>
                 </Physics>
 
                 <Orbit/>

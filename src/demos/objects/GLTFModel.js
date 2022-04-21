@@ -24,7 +24,7 @@ const GLTFModel = (props) => {
     })
 
     return (
-        <primitive ref={ref} object={gltf.scene} scale={props.scale} dispose={null}/>
+        <primitive ref={ref} position={props.position} object={gltf.scene} scale={props.scale} dispose={null}/>
     )
 }
 export default GLTFModel
