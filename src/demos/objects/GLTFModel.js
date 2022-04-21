@@ -10,23 +10,21 @@ const GLTFModel = (props) => {
 
     useFrame((state, delta) => {
         if (movement.forward) {
-            ref.current.position.z += 0.1;
-        }
-        if (movement.backward) {
-            ref.current.position.z -= 0.1;
-        }
-        if (movement.left) {
             ref.current.position.x += 0.1;
         }
-        if (movement.right) {
+        if (movement.backward) {
             ref.current.position.x -= 0.1;
+        }
+        if (movement.left) {
+            ref.current.position.z -= 0.1;
+        }
+        if (movement.right) {
+            ref.current.position.z += 0.1;
         }
     })
 
     return (
-        <>
-            <primitive ref={ref} object={gltf.scene} position={props.scale} scale={props.scale} dispose={null}/>
-        </>
+        <primitive ref={ref} object={gltf.scene} scale={props.scale} dispose={null}/>
     )
 }
 export default GLTFModel

@@ -33,7 +33,5 @@ export const usePersonControls = () => {
             document.removeEventListener('keyup', handleKeyUp)
         }
     }, [])
-
-    console.log(movement)
     return movement
 }

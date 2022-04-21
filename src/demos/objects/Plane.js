@@ -1,12 +1,13 @@
 import React, {useRef} from "react";
 
 const Plane = (props) => {
+    const {geometryProps,...meshProps}=props;
     return (
         <mesh
-            {...props}
+            {...meshProps}
             receiveShadow
         >
-            <boxBufferGeometry args={[10, 0.1, 10]}/>
+            <boxBufferGeometry {...geometryProps}/>
             <meshPhysicalMaterial color="white" />
         </mesh>
     )

@@ -1,5 +1,4 @@
-import {Physics} from '@react-three/cannon';
-import React, {Suspense} from 'react'
+import React, {Suspense, useRef} from 'react'
 import {Canvas} from '@react-three/fiber'
 import Orbit from "../objects/Orbit";
 import Draggable from "../objects/Draggable";
@@ -8,7 +7,6 @@ import PhysicsPlane from "../objects/physics/PhysicsPlane";
 import FBXModel from "../objects/FBXModel";
 import Plane from "../objects/Plane";
 import GLTFModel from "../objects/GLTFModel";
-import Box from "../objects/Box";
 
 const Index = () => {
     return (
@@ -26,6 +24,12 @@ const Index = () => {
                         <GLTFModel position={[0, 1, 0]} src={'truck/scene.gltf'} scale={0.01}/>
                     </Draggable>
                 </Suspense>
+                <Suspense fallback={null}>
+                    <Draggable>
+                        <GLTFModel position={[0, 1, 0]} src={'shiba/scene.gltf'} scale={1}/>
+                    </Draggable>
+                </Suspense>
+                <Plane geometryProps={{args:[100, 0.1, 100]}} position={[0, -0.5, 0]}/>
                 {/*</Physics>*/}
 
                 <Orbit/>
