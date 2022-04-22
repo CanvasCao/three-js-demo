@@ -25,8 +25,9 @@ const Index = () => {
                                 offset={[0.4, -1, 0]}
                                 position={[5, 10, 0]}
                                 visible
+                                mass={10}
                             >
-                                <GLTFModel mass={10} src={'truck/scene.gltf'} scale={0.01}/>
+                                <GLTFModel src={'truck/scene.gltf'} scale={0.01}/>
                             </BoundingBox>
                         </Draggable>
                     </Suspense>

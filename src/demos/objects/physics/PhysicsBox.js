@@ -10,7 +10,7 @@ const PhysicsBox = (props) => {
         // rotation.x += 0.01;
         // rotation.y += 0.01;
         // api.rotation.copy({x: rotation.x, y: rotation.y, z: 0})
-        api.rotation.set(Math.random(), Math.random(), Math.random())
+        // api.rotation.set(Math.random(), Math.random(), Math.random())
     })
 
     const {materialProps, ...meshProps} = props;

@@ -8,7 +8,8 @@
 // import Index from "./demos/06-1-draggable";
 // import Index from "./demos/07-physics";
 // import Index from "./demos/08-model";
-import Index from "./demos/08-1-physics-model";
+// import Index from "./demos/08-1-physics-model";
+import Index from "./demos/examples/car";
 
 function App() {
     return <Index/>;

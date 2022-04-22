@@ -2,7 +2,7 @@ import React from "react";
 import {useBox} from "@react-three/cannon";
 
 const PhysicsPlane = (props) => {
-    const {geometryProps, ...meshProps} = props;
+    const {geometryProps, materialProps, ...meshProps} = props;
 
     const [ref, api] = useBox(() => ({args: geometryProps.args, ...props}));
     return (
@@ -12,7 +12,7 @@ const PhysicsPlane = (props) => {
             receiveShadow
         >
             <boxBufferGeometry {...geometryProps}/>
-            <meshPhysicalMaterial color="white"/>
+            <meshPhysicalMaterial {...materialProps}/>
         </mesh>
     )
 }

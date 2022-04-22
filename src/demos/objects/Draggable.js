@@ -17,10 +17,12 @@ const Draggable = (props) => {
 
     useEffect(() => {
         // console.log(controlsRef)
-        controlsRef.current.addEventListener('hoveron', e =>
-            scene.orbitControls.enabled = false
-        );
-        controlsRef.current.addEventListener('hoveroff', e => scene.orbitControls.enabled = true);
+        controlsRef.current.addEventListener('hoveron', e => {
+            if (scene.orbitControls) scene.orbitControls.enabled = false
+        });
+        controlsRef.current.addEventListener('hoveroff', e => {
+            if (scene.orbitControls) scene.orbitControls.enabled = true
+        });
 
         // Physics event
         controlsRef.current.addEventListener('dragstart',

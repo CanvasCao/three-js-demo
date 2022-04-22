@@ -1,18 +1,26 @@
 import React from "react";
 import {useBox} from "@react-three/cannon";
+import {useKeyControls} from "../../../hooks/useKeyControls";
 
 const BoundingBox = (
     {
         position = [0, 0, 0],
         offset = [0, 0, 0],
         boxArgs = [1, 1, 1],
+        rotation = [0, 0, 0],
         visible = false,
-        mass = 1,
+        mass = 10,
         children,
     }) => {
-    const [ref, api] = useBox(() => ({mass, args: boxArgs, position}));
+    const [boxRef, api] = useBox(() => ({
+        mass,
+        args: boxArgs,
+        position,
+        rotation,
+    }));
+
     return (
-        <group ref={ref} api={api}>
+        <group ref={boxRef} api={api}>
             <mesh
                 scale={boxArgs}
                 visible={visible}
@@ -22,8 +30,6 @@ const BoundingBox = (
             </mesh>
             <group position={offset}>{children}</group>
         </group>
-
-
     )
 }
 export default BoundingBox
