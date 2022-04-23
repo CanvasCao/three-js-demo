@@ -17,15 +17,15 @@ const Index = () => {
                 <ambientLight intensity={0.2}/>
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
 
-                <Suspense fallback={null}>
-                    <Background src='shanghai.jpeg'/>
-                </Suspense>
+                {/*<Suspense fallback={null}>*/}
+                {/*    <Background src='shanghai.jpeg'/>*/}
+                {/*</Suspense>*/}
 
                 <Suspense fallback={null}>
                     <Box position={[0, 2, 0]}
+                        // materialProps={{fog:true}}
                         // materialProps={{opacity: 0.2, transparent: true}}
                         // materialProps={{visible:false}}
-                        // materialProps={{fog:true}}
                         // materialProps={{wireframe:true}}
                     />
                 </Suspense>

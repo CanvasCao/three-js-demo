@@ -19,9 +19,10 @@ const Index = () => {
                 <Physics>
                     <Draggable>
                         <PhysicsBox position={[-1, 5, 1]} materialProps={{color: 'blue'}}/>
+                    </Draggable>
+                    <Draggable>
                         <PhysicsBox position={[1, 5, 1]} materialProps={{color: 'red'}}/>
                     </Draggable>
-
                     <PhysicsPlane geometryProps={{args: [10, 0.1, 10]}} position={[0, -0.5, 0]}/>
                 </Physics>
 

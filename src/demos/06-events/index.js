@@ -7,10 +7,10 @@ import * as THREE from 'three'
 
 
 const Index = () => {
-    const handlePointerDown = e => {
-        const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-        e.object.material.color = new THREE.Color(randomColor)
-    }
+    // const handlePointerDown = e => {
+    //     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    //     e.object.material.color = new THREE.Color(randomColor)
+    // }
 
     const handlePointerEnter = e => {
         e.object.scale.set(2, 2, 2)
@@ -30,7 +30,7 @@ const Index = () => {
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
 
                 <Box position={[0, 2, 0]}
-                     onPointerDown={handlePointerDown}
+                     // onPointerDown={handlePointerDown}
                      onPointerEnter={handlePointerEnter}
                      onPointerLeave={handlePointerLeave}
 
