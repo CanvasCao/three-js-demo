@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import {useBox} from "@react-three/cannon";
 
 const PhysicsBox = (props) => {
+    const args = props.args || [1, 1, 1];
     const [ref, api] = useBox(() => ({mass: 1, ...props}));
     let rotation = {x: 0, y: 0, z: 0};
     useFrame((state, delta) => {
@@ -24,7 +25,7 @@ const PhysicsBox = (props) => {
             castShadow
             receiveShadow
         >
-            <boxGeometry args={[1, 1, 1]}/>
+            <boxGeometry args={args}/>
             <meshPhysicalMaterial
                 {...materialProps}
                 color={materialProps?.color || 'blue'}

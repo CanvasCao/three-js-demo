@@ -1,6 +1,5 @@
 import React from "react";
 import {useBox} from "@react-three/cannon";
-import {useKeyControls} from "../../../hooks/useKeyControls";
 
 const BoundingBox = (
     {

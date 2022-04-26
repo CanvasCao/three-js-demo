@@ -2,7 +2,6 @@ import React, {useRef} from 'react'
 import {Canvas, useFrame} from '@react-three/fiber'
 
 function Box(props) {
-    const mesh = useRef();
     const [x,setX]=useState(0);
 
     // useFrame((state, delta) => {
@@ -11,8 +10,7 @@ function Box(props) {
 
     return (
         <mesh
-            {...props} 
-            ref={mesh}
+            {...props}
             scale={2}
             position-x={x}
         >

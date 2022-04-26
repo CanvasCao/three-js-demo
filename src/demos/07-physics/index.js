@@ -5,6 +5,8 @@ import Orbit from "../objects/Orbit";
 import Draggable from "../objects/Draggable";
 import PhysicsBox from "../objects/physics/PhysicsBox";
 import PhysicsPlane from "../objects/physics/PhysicsPlane";
+import Plane from "../objects/Plane";
+import Box from "../objects/Box";
 
 const Index = () => {
     return (
@@ -16,15 +18,12 @@ const Index = () => {
                 <ambientLight intensity={0.2}/>
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
 
-                <Physics>
+                {/*<Physics>*/}
                     <Draggable>
-                        <PhysicsBox position={[-1, 5, 1]} materialProps={{color: 'blue'}}/>
+                        <Box args={[1,1,1]} position={[-1, 5, 1]} materialProps={{color: 'blue'}}/>
                     </Draggable>
-                    <Draggable>
-                        <PhysicsBox position={[1, 5, 1]} materialProps={{color: 'red'}}/>
-                    </Draggable>
-                    <PhysicsPlane geometryProps={{args: [10, 0.1, 10]}} position={[0, -0.5, 0]}/>
-                </Physics>
+                    <Plane geometryProps={{args: [10, 0.1, 10]}} position={[0, -0.5, 0]}/>
+                {/*</Physics>*/}
 
                 <Orbit/>
                 <axesHelper args={[5]}/>

@@ -18,7 +18,6 @@ const Index = () => {
                 <ambientLight intensity={0.2}/>
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
 
-                {/*<Physics>*/}
                 <Suspense fallback={null}>
                     <Draggable>
                         <GLTFModel position={[0, 1, 0]} src={'truck/scene.gltf'} scale={0.01}/>
@@ -30,7 +29,6 @@ const Index = () => {
                     </Draggable>
                 </Suspense>
                 <Plane geometryProps={{args:[100, 0.1, 100]}} position={[0, -0.5, 0]}/>
-                {/*</Physics>*/}
 
                 <Orbit/>
                 <axesHelper args={[5]}/>

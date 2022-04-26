@@ -5,7 +5,7 @@ const Plane = (props) => {
     return (
         <mesh
             {...meshProps}
-            receiveShadow
+            // receiveShadow
         >
             <boxBufferGeometry args={[10, 0.1, 10]} {...geometryProps} />
             <meshPhysicalMaterial color="white" />

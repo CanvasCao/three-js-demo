@@ -11,8 +11,8 @@ function Box(props) {
         <mesh
             {...props}
             ref={mesh}
-            scale={2}
         >
+            {/*boxWidth, boxHeight, boxDepth*/}
             <boxGeometry args={[1, 1, 1]}/>
             <meshStandardMaterial color='blue'/>
         </mesh>
@@ -22,7 +22,8 @@ function Box(props) {
 const Index = () => {
     return (
         <div style={{height: '100vh', width: '100vw'}}>
-            <Canvas>
+            <Canvas style={{background: 'black'}}
+                    camera={{position: [10, 10, 10], fov: 60}}>
                 <ambientLight/>
                 <pointLight position={[10, 10, 10]}/>
                 <Box position={[0, 0, 0]}/>

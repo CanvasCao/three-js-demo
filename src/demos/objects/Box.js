@@ -19,8 +19,8 @@ const Box = (props) => {
             {...meshProps}
             ref={ref}
             scale={1}
-            castShadow
-            receiveShadow
+            // castShadow
+            // receiveShadow
         >
             <boxGeometry args={[1, 1, 1]}/>
             <meshPhysicalMaterial

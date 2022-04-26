@@ -7,7 +7,7 @@ import Orbit from "../objects/Orbit";
 const Index = () => {
     return (
         <div style={{height: '100vh', width: '100vw'}}>
-            <Canvas style={{background: 'black'}} camera={{position: [10, 10, 10]}}>
+            <Canvas style={{background: 'black'}} camera={{position: [0, 0, 10]}}>
                 <ambientLight/>
                 <Box position={[0, 1, 3]}/>
 

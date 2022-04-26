@@ -36,8 +36,8 @@ const Index = () => {
                         <Plane rotation={[-Math.PI / 2, 0, 0]} userData={{id: 'floor'}}/>
                         <Vehicle position={[0, 2, 0]} rotation={[0, -Math.PI / 4, 0]} angularVelocity={[0, 0.5, 0]}/>
 
-                        <PhysicsBox position={[0, 1, 9]}
-                                    materialProps={{color: '#' + Math.floor(Math.random() * 16777215).toString(16)}}/>
+                        {/*<PhysicsBox position={[0, 0, 9]}*/}
+                        {/*            materialProps={{color: '#' + Math.floor(Math.random() * 16777215).toString(16)}}/>*/}
                     </Physics>
                     <Orbit/>
                 </Canvas>

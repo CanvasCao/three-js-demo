@@ -19,7 +19,6 @@ const Index = () => {
 
                 <Draggable>
                     <Box position={[0, 1, 1]}/>
-                    <Box position={[0, 2, 2]}/>
                 </Draggable>
 
                 <Plane position={[0, -0.5, 0]}/>

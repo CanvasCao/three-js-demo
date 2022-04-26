@@ -7,10 +7,10 @@ import * as THREE from 'three'
 
 
 const Index = () => {
-    // const handlePointerDown = e => {
-    //     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    //     e.object.material.color = new THREE.Color(randomColor)
-    // }
+    const handlePointerDown = e => {
+        const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        e.object.material.color = new THREE.Color(randomColor)
+    }
 
     const handlePointerEnter = e => {
         e.object.scale.set(2, 2, 2)
