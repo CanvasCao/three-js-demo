@@ -89,13 +89,13 @@ function Vehicle(
     // useEffect(() => vehicleApi.sliding.subscribe((v) => console.log('sliding', v)), [])
 
     useFrame(({gl, scene, camera}) => {
-        chassisBody.current.getWorldPosition(chassisV3)
-        wheels[0].current.getWorldPosition(frontWheelV3)
-        wheels[2].current.getWorldPosition(backWheelV3)
-        const diffX = backWheelV3.x - frontWheelV3.x
-        const diffZ = backWheelV3.z - frontWheelV3.z
-        camera.position.lerp(new Vector3(chassisV3.x + diffX * 10, chassisV3.y + 10, chassisV3.z + diffZ * 10), 0.1);
-        camera.lookAt(chassisV3)
+        // chassisBody.current.getWorldPosition(chassisV3)
+        // wheels[0].current.getWorldPosition(frontWheelV3)
+        // wheels[2].current.getWorldPosition(backWheelV3)
+        // const diffX = backWheelV3.x - frontWheelV3.x
+        // const diffZ = backWheelV3.z - frontWheelV3.z
+        // camera.position.lerp(new Vector3(chassisV3.x + diffX * 10, chassisV3.y + 10, chassisV3.z + diffZ * 10), 0.1);
+        // camera.lookAt(chassisV3)
 
         const {backward, brake, forward, left, reset, right} = controls.current
 

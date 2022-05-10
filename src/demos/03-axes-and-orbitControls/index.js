@@ -11,8 +11,8 @@ const Index = () => {
                 <ambientLight/>
                 <Box position={[0, 1, 3]}/>
 
-                <Orbit/>
-                <axesHelper args={[5]}/>
+                {/*<Orbit/>*/}
+                {/*<axesHelper args={[5]}/>*/}
             </Canvas>
         </div>
     )

@@ -7,9 +7,9 @@ const Background = (props) => {
     const {gl} = useThree();
 
 
-    // https://www.google.com/search?q=equirectangular
-    // https://www.trekview.org/blog/2021/projection-type-360-photography/
     // https://polyhaven.com/hdris you can download image from here
+    // https://www.trekview.org/blog/2021/projection-type-360-photography/
+
 
     const formatted = useMemo(() =>
             new THREE.WebGLCubeRenderTarget(texture.image.height)

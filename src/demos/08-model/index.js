@@ -18,6 +18,7 @@ const Index = () => {
                 <ambientLight intensity={0.2}/>
                 <pointLight intensity={1} castShadow position={[0, 10, 0]}/>
 
+                {/*https://sketchfab.com/*/}
                 <Suspense fallback={null}>
                     <Draggable>
                         <GLTFModel position={[0, 1, 0]} src={'truck/scene.gltf'} scale={0.01}/>

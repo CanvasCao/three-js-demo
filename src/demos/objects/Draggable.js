@@ -17,23 +17,23 @@ const Draggable = (props) => {
 
     useEffect(() => {
         // console.log(controlsRef)
-        controlsRef.current.addEventListener('hoveron', e => {
-            if (scene.orbitControls) scene.orbitControls.enabled = false
-        });
-        controlsRef.current.addEventListener('hoveroff', e => {
-            if (scene.orbitControls) scene.orbitControls.enabled = true
-        });
+        // controlsRef.current.addEventListener('hoveron', e => {
+        //     if (scene.orbitControls) scene.orbitControls.enabled = false
+        // });
+        // controlsRef.current.addEventListener('hoveroff', e => {
+        //     if (scene.orbitControls) scene.orbitControls.enabled = true
+        // });
 
         // Physics event
-        controlsRef.current.addEventListener('dragstart',
-            e => e.object.api?.mass.set(0)
-        );
-        controlsRef.current.addEventListener('dragend',
-            e => e.object.api?.mass.set(1)
-        );
-        controlsRef.current.addEventListener('drag',
-            e => e.object.api?.position.copy(e.object.position)
-        );
+        // controlsRef.current.addEventListener('dragstart',
+        //     e => e.object.api?.mass.set(0)
+        // );
+        // controlsRef.current.addEventListener('dragend',
+        //     e => e.object.api?.mass.set(1)
+        // );
+        // controlsRef.current.addEventListener('drag',
+        //     e => e.object.api?.position.copy(e.object.position)
+        // );
 
     }, [objects, scene])
 
